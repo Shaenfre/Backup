@@ -1,50 +1,70 @@
 package com.stackroute.informationservice.models;
 
 public class LocationStats {
-    private String state;
-    private String country;
-    private int latestTotalCases;
-    private int diffFromPrevDay;
+    private String loc;
+    private String confirmedCasesIndian;
+    private String confirmedCasesForeign;
+    private String discharged;
+    private String deaths;
+    private String totalConfirmed;
 
-    public String getState() {
-        return state;
+    public String getLoc() {
+        return loc;
     }
 
-    public void setState(String state) {
-        this.state = state;
+    public void setLoc(String loc) {
+        this.loc = loc;
     }
 
-    public String getCountry() {
-        return country;
+    public String getConfirmedCasesIndian() {
+        return confirmedCasesIndian;
     }
 
-    public void setCountry(String country) {
-        this.country = country;
+    public void setConfirmedCasesIndian(String confirmedCasesIndian) {
+        this.confirmedCasesIndian = confirmedCasesIndian;
     }
 
-    public int getLatestTotalCases() {
-        return latestTotalCases;
+    public String getConfirmedCasesForeign() {
+        return confirmedCasesForeign;
     }
 
-    public void setLatestTotalCases(int latestTotalCases) {
-        this.latestTotalCases = latestTotalCases;
+    public void setConfirmedCasesForeign(String confirmedCasesForeign) {
+        this.confirmedCasesForeign = confirmedCasesForeign;
     }
 
-    public int getDiffFromPrevDay() {
-        return diffFromPrevDay;
+    public String getDischarged() {
+        return discharged;
     }
 
-    public void setDiffFromPrevDay(int diffFromPrevDay) {
-        this.diffFromPrevDay = diffFromPrevDay;
+    public void setDischarged(String discharged) {
+        this.discharged = discharged;
+    }
+
+    public String getDeaths() {
+        return deaths;
+    }
+
+    public void setDeaths(String deaths) {
+        this.deaths = deaths;
+    }
+
+    public String getTotalConfirmed() {
+        return totalConfirmed;
+    }
+
+    public void setTotalConfirmed(String totalConfirmed) {
+        this.totalConfirmed = totalConfirmed;
     }
 
     @Override
     public String toString() {
         return "LocationStats{" +
-                "state='" + state + '\'' +
-                ", country='" + country + '\'' +
-                ", latestTotalCases=" + latestTotalCases +
-                ", diffFromPrevDay=" + diffFromPrevDay +
+                "loc='" + loc + '\'' +
+                ", confirmedCasesIndian='" + confirmedCasesIndian + '\'' +
+                ", confirmedCasesForeign='" + confirmedCasesForeign + '\'' +
+                ", discharged='" + discharged + '\'' +
+                ", deaths='" + deaths + '\'' +
+                ", totalConfirmed='" + totalConfirmed + '\'' +
                 '}';
     }
 }
