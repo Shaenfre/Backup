@@ -8,14 +8,13 @@ import { InformationService, LocationStats } from 'src/app/services/information.
 })
 export class LatestInformationComponent implements OnInit {
 
-  
   locationStats!: LocationStats[];
   constructor(private InfoService: InformationService) { }
 
   ngOnInit(): void {
     this.InfoService.getInformation().subscribe(data => {
       console.log(this.locationStats = data);
-    })
+    });
   }
 
 }

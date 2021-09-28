@@ -1,31 +1,26 @@
 <div class="container">
 <div class="col-md-6">
-    <h2 class="text-center">Add Medicine</h2>
+    <h2 class="text-center">Add Bed</h2>
     <form>
       <div class="form-group">
-        <label for="name">Medicine Name:</label>
-        <input type="name" [(ngModel)]="user.medName" placeholder="Name" name="name" class="form-control" id="name">
+        <label for="bedType">Bed Type:</label>
+        <input type="name" [(ngModel)]="user.bedType" placeholder="Bed Type" name="bedType" class="form-control" id="bedType">
       </div>
 
       <div class="form-group">
-        <label for="pharmacy">Pharmacy:</label>
-        <input [(ngModel)]="user.pharmacy" placeholder="Pharmacy" name="pharmacy" class="form-control" id="pharmacy">
-      </div>
-
-      <div class="form-group">
-        <label for="medicineId">City</label>
-        <input [(ngModel)]="user.city" placeholder="City Name" name="city" class="form-control" id="medicineId">
+        <label for="city">City</label>
+        <input [(ngModel)]="user.city" placeholder="City Name" name="city" class="form-control" id="city">
       </div>
       <div class="form-group">
-        <label for="name">Address:</label>
+        <label for="address">Address:</label>
         <input type="name" [(ngModel)]="user.address" placeholder="Address" name="address" class="form-control" id="address">
       </div>
       <div class="form-group">
-        <label for="name">Contact Person:</label>
+        <label for="address">Contact Person:</label>
         <input type="name" [(ngModel)]="user.contactPerson" placeholder="Contact Person" name="contactPerson" class="form-control" id="contactPerson">
       </div>
       <div class="form-group">
-        <label for="name">Mobile Number:</label>
+        <label for="mobileNumber">Mobile Number:</label>
         <input type="name" [(ngModel)]="user.mobileNumber" placeholder="Mobile Number" name="mobileNumber" class="form-control" id="mobileNumber">
       </div>
       <div class="form-check">
@@ -34,7 +29,7 @@
           Click here only if it's verified
         </label>
       </div>
-      <button class="btn btn-success" (click)="CreateMedicine()">Submit</button>
+      <button class="btn btn-success" (click)="CreateBed()">Submit</button>
     </form>
     </div>
 </div>

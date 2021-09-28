@@ -7,22 +7,23 @@ import { Observable } from 'rxjs';
 })
 export class InformationService {
 
-  LocationStats : LocationStats[] = []
+  LocationStats: LocationStats[] = [];
   constructor(private httpService: HttpClient) { }
 
-  public getInformation() : Observable<LocationStats[]>
+  public getInformation(): Observable<LocationStats[]>
   {
     return this.httpService.get<LocationStats[]>('http://localhost:1234/api/v1/information');
   }
 }
 export class LocationStats {
-  public loc : string;
+  public loc: string;
   public confirmedCasesIndian: string;
   public confirmedCasesForeign: string;
   public discharged: string;
   public deaths: string;
   public totalConfirmed: string;
-  constructor(loc : string, confirmedCasesIndian: string, confirmedCasesForeign: string, discharged: string, deaths: string, totalConfirmed: string) {
+  constructor(loc: string, confirmedCasesIndian: string, confirmedCasesForeign: string,
+              discharged: string, deaths: string, totalConfirmed: string) {
     this.loc = loc;
     this.confirmedCasesIndian = confirmedCasesIndian;
     this.confirmedCasesForeign = confirmedCasesForeign;
