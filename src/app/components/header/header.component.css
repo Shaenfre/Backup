@@ -1,0 +1,59 @@
+
+.Container input{ /* You Can Name it what you want*/
+    margin-right:16px;
+    }
+    .Container input:last-child{
+    margin-right:0px;
+    /*so the last one dont push the div thas giving the space only between the inputs*/
+}
+
+/* .header{
+    padding: 20px;
+    width: 100%;
+    background-color:cornflowerblue;
+    position: fixed;
+    top: 0%;
+} */
+
+.fixed {
+    position: fixed;
+    width: 100%;
+    transition: 0.2s linear;
+    top: 0px;
+    z-index: 998;
+}
+
+.nav1{
+    background-color: white;
+    border-bottom: 2px solid #4154F1;
+    -webkit-box-shadow: 0 4px 6px -6px #4154F1;
+    -moz-box-shadow: 0 4px 6px -6px #4154F1;
+    box-shadow: 0 2px 6px -6px #4154F1;
+    /* height: 70px; */
+}
+
+.nofixed {
+    position: static;
+    transition: 0.2s linear;
+    top: -50px;
+    z-index: 998;
+}
+
+.navbar-nav > li > a {padding-top:5px !important; padding-bottom:5px !important;}
+.navbar {min-height:15px !important}
+
+/* .navbar navbar-light, .container-fluid{
+    position: fixed;
+    top: 0%;
+    background-color: cornflowerblue;
+    padding: 10px;
+    z-index: 998;
+} */
+.test.btn-toolbar{
+    display: block !important;
+}
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+  }

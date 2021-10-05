@@ -10,32 +10,34 @@ export class SMedicineService{
   constructor(private httpService: HttpClient) { }
   CreateMedicine(medicine: Medicine): Observable<Medicine> {
     console.log(medicine);
-    return this.httpService.post<Medicine>('http://localhost:9900/medicine/create', medicine);
+    return this.httpService.post<Medicine>('http://localhost:9901/medicine/create', medicine);
   }
   public deleteMedicine(medicine: Medicine) {
-    return this.httpService.delete<Medicine>('http://localhost:9900/medicine//delete/' + medicine.city);
+    return this.httpService.delete<Medicine>('http://localhost:9901/medicine//delete/' + medicine.city);
   }
   public updateMedicine(medicine: Medicine) {
     console.log(medicine);
-    return this.httpService.put<Medicine>('http://localhost:9900/medicine/update', medicine);
+    return this.httpService.put<Medicine>('http://localhost:9901/medicine/update', medicine);
   }
   getMedicines(){
-    return this.httpService.get<Medicine[]>('http://localhost:9900/medicine/getAll');
+    return this.httpService.get<Medicine[]>('http://localhost:9901/medicine/getAll');
   }
 }
 export class Medicine{
   public city: string;
-  public medName: string;
+  public medicineName: string;
   public pharmacy: string;
   public address: string;
   public contactPerson: string;
   public mobileNumber: string;
-  constructor( city: string, medName: string, pharmacy: string, address: string, contactPerson: string, mobileNumber: string) {
+  public verificationStatus: boolean;
+  constructor( city: string, medicineName: string, pharmacy: string, address: string, contactPerson: string, mobileNumber: string, verificationStatus: boolean) {
     this.city = city;
-    this.medName = medName;
+    this.medicineName = medicineName;
     this.pharmacy = pharmacy;
     this.address = address;
     this.contactPerson = contactPerson;
     this.mobileNumber = mobileNumber;
+    this.verificationStatus = verificationStatus;
   }
 }
