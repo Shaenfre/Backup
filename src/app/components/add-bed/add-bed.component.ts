@@ -16,7 +16,7 @@ export class AddBedComponent implements OnInit {
   ]);
   // strValue: String = "N";
   isActive = false;
-  user: Bed = new Bed('', '', '', '', '', '', this.isActive);
+  user: Bed = new Bed( '', '', '', '', '', this.isActive);
 
   constructor(private equipmentService: BedService, private snackBar: MatSnackBar) { }
 

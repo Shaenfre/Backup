@@ -1,5 +1,5 @@
-<p>verify-bed works!</p>
-<div class="col-md-6 container center" *ngIf = "bed">
+<p>verify-medicine works!</p>
+<div class="col-md-6 container center" *ngIf = "med">
     <table class="table center table-striped table-hover table-bordered">
         <thead>
             <tr>
@@ -13,12 +13,13 @@
         </thead>
         <tbody>
             <tr>
-                <td>{{bed.bedType}}</td>
-                <td>{{bed.city}}</td>
-                <td>{{bed.address}}</td>
-                <td>{{bed.contactPerson}}</td>
-                <td>{{bed.mobileNumber}}</td>
-                <td>{{bed.verificationStatus}}</td>
+                <td>{{med.medicineName}}</td>
+                <td>{{med.city}}</td>
+                <td>{{med.pharmacy}}</td>
+                <td>{{med.address}}</td>
+                <td>{{med.contactPerson}}</td>
+                <td>{{med.mobileNumber}}</td>
+                <td>{{med.verificationStatus}}</td>
                 <!-- <td>
                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" (change)="check()">
                 </td> -->
@@ -31,6 +32,6 @@
     <button class="btn btn-success" (click)="putVerified()">Verify</button>
     <button class="btn btn-success" (click)="passOn()">Pass on</button>
 </div>
-<div class="col-md-6 container center" *ngIf = "!bed">
+<div class="col-md-6 container center" *ngIf = "!med">
     Nothing to verify
 </div>

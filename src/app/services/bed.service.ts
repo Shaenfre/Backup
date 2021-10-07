@@ -1,27 +1,26 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { uuid } from 'aws-sdk/clients/customerprofiles';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BedService{
   // apiBaseUrl=environment.apiBaseUrl;
-  Bed: Bed[] = [];
+  Bed!: Bed;
   constructor(private httpService: HttpClient) { }
   CreateBed(bed: Bed): Observable<Bed> {
     console.log(bed);
     return this.httpService.post<Bed>('http://localhost:9901/bed/create', bed);
   }
   public deleteBed(bed: Bed) {
-    return this.httpService.delete<Bed>('http://localhost:9901/bed/delete/' + bed.city);
+    return this.httpService.delete<Bed>('http://localhost:9901/bed//delete/' + bed.city);
   }
   public updateBed(bed: Bed) {
     console.log(bed);
     return this.httpService.put<Bed>('http://localhost:9901/bed/update', bed);
   }
-  getBeds(){
+  public getBeds(){
     return this.httpService.get<Bed[]>('http://localhost:9901/bed/getAll');
   }
 
@@ -32,15 +31,14 @@ export class BedService{
 
 }
 export class Bed{
-  public bedId: string;
   public city: string;
   public bedType: string;
   public address: string;
   public contactPerson: string;
   public mobileNumber: string;
+  // public verificationStatus: string;
   public verificationStatus: boolean;
-  constructor(bedId: string, bedType: string, city: string, address: string, contactPerson: string, mobileNumber: string, verificationStatus: boolean) {
-    this.bedId = bedId;
+  constructor( city: string, bedType: string, address: string, contactPerson: string, mobileNumber: string, verificationStatus: boolean) {
     this.city = city;
     this.bedType = bedType;
     this.address = address;
